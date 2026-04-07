@@ -12,23 +12,27 @@ Cada pasta representa um cenário diferente de estudo e prática de infraestrutu
 
 ```bash
 vagrant-projetos/
-├── projeto01/
-├── projeto02/
-├── projeto03/
+├── 00-vagrant-vmbox-custom/
+├── 01-vagrant-shell-script/
+├── 02-.../
 ```
-
----
 
 ## 🧪 Projetos disponíveis
 
-### 🔹 projeto01 - Ambiente básico com Vagrant
+### 🔹 00-vagrant-vmbox-custom
 
-* Provisionamento de VM Linux
+* Provisionamento de VM Linux Personalizda
+* Sincronização de pasta entre host e vm criada
 * Acesso via SSH
 * Testes iniciais de automação
 
-*(adicione mais conforme criar novos labs)*
+### 🔹 01-vagrant-shell-script 
 
+* Provisionamento de VM Linux
+* Instalação de lista de pacotes
+* Criação de usuário local
+* Acesso via SSH
+* Testes iniciais de automação
 ---
 
 ## 🧰 Tecnologias utilizadas
@@ -45,7 +49,7 @@ vagrant-projetos/
 Entre no projeto desejado:
 
 ```bash
-cd projeto01
+cd 00-vagrant-vmbox-custom
 vagrant up
 vagrant ssh
 ```

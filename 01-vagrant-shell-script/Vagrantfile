@@ -1,0 +1,15 @@
+
+Vagrant.configure("2") do |config|
+  config.vm.provider "virtualbox" do |vm|
+    vm.name = "applab-02"
+    vm.memory = 1024
+    vm.cpus = 1
+  end
+
+  config.vm.box = "hashicorp-education/ubuntu-24-04"
+  config.vm.box_version = "0.1.0"
+  config.vm.network :forwarded_port, guest: 80, host: 8080 
+  config.vm.network :public_network, ip:"192.168.1.14", bridge:"enp0s8"
+  config.vm.provision "shell", path: "provision.sh"
+  #config.vm.synced_folder "data-local/", "/data-vm" 
+end
